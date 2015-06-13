@@ -1,0 +1,6 @@
+.ember-freestyle-palette div {
+  display: inline-block;
+  height: 50px;
+  margin-right: 5px;
+  width: 50px;
+}

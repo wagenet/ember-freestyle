@@ -1,0 +1,21 @@
+{
+  "ember-freestyle": {
+    "title": "Ember Freestyle Styleguide",
+    "components": [
+      {
+        "name": "freestyle-headers",
+        "attrs": {
+          "h1": "fromapp",
+          "h2": "fromapp",
+          "h3": "fromapp",
+          "h4": "fromapp",
+          "h5": "fromapp",
+          "h6": "fromapp"
+        }
+      },
+      {
+        "name": "freestyle-palette"
+      }
+    ]
+  }
+}

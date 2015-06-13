@@ -18,7 +18,6 @@ module.exports = {
   },
 
   treeForApp: function(tree) {
-    var freestyleTree = jsonModule('app/ember-freestyle');
-    return mergeTrees([tree, freestyleTree]);
+    return jsonModule(tree);
   }
 };

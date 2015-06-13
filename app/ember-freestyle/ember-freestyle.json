@@ -4,7 +4,7 @@
     "components": [
       {
         "name": "freestyle-headers",
-        "data": {
+        "attrs": {
           "h1": "Ember Freestyle Header 1",
           "h2": "Ember Freestyle Header 2",
           "h3": "Ember Freestyle Header 3",

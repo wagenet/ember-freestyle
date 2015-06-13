@@ -1,4 +1,3 @@
-{{#each components as |component|}}
-  {{component component.name}}
+{{#each components as |componentSpec|}}
+  {{freestyle-component componentSpec=componentSpec}}
 {{/each}}
-{{yield}}

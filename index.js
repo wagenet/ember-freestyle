@@ -19,5 +19,12 @@ module.exports = {
 
   treeForApp: function(tree) {
     return jsonModule(tree);
-  }
+  },
+
+  postprocessTree: function(type, tree) {
+    if (type === 'js') {
+      return jsonModule(tree);
+    }
+    return tree;
+  },
 };

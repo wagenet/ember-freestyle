@@ -3,5 +3,5 @@ import layout from './template';
 
 export default Ember.Component.extend({
   layout: layout,
-  fie: 'fie val'
+  status: 'default'
 });

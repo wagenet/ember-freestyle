@@ -4,5 +4,6 @@ import layout from './template';
 export default Ember.Component.extend({
   classNames: 'ember-freestyle-palette',
   layout: layout,
-  colors: Ember.A(['red', 'blue', 'green'])
+  title: 'Palette',
+  colors: Ember.A(['red', 'green', 'blue'])
 });

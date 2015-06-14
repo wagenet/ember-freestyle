@@ -1,20 +1,37 @@
 {
   "ember-freestyle": {
-    "title": "Ember Freestyle Styleguide",
+    "title": "Dummy App Styleguide",
     "components": [
       {
         "name": "freestyle-headers",
         "attrs": {
-          "h1": "fromapp",
-          "h2": "fromapp",
-          "h3": "fromapp",
-          "h4": "fromapp",
-          "h5": "fromapp",
-          "h6": "fromapp"
+          "h1": "A Dummy App Using Ember Freestyle 1",
+          "h2": "A Dummy App Using Ember Freestyle 2",
+          "h3": "A Dummy App Using Ember Freestyle 3",
+          "h4": "A Dummy App Using Ember Freestyle 4",
+          "h5": "A Dummy App Using Ember Freestyle 5",
+          "h6": "A Dummy App Using Ember Freestyle 6"
         }
       },
       {
-        "name": "freestyle-palette"
+        "name": "freestyle-palette",
+        "attrs": {
+          "title": "Color Palette",
+          "colors": ["#A7C6DA", "#EEFCCE", "#9EB25D", "#F1DB4B", "#EDFF71"]
+        },
+        "arrayAttrs": ["colors"]
+      },
+      {
+        "name": "x-foo",
+        "attrs": {
+          "status": "active"
+        }
+      },
+      {
+        "name": "x-foo",
+        "attrs": {
+          "status": "most definitely not active"
+        }
       }
     ]
   }

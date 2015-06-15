@@ -15,6 +15,10 @@ body {
   font-family: sans-serif;
 }
 
+.freestyle-component {
+  margin-bottom: 50px;
+}
+
 .menu {
   display: block;
 }

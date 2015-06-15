@@ -5,7 +5,11 @@ const { computed, get } = Ember;
 
 export default Ember.Component.extend({
   layout: layout,
+  classNames: ['freestyle-component'],
   componentSpec: null, // passed in
+  exampleUsage: computed.alias('componentSpec.exampleUsage'),
+  exampleUsageUnspecified: computed.none('exampleUsage'),
+  showExampleUsage: computed.or('exampleUsageUnspecified','exampleUsage'),
   componentAttrs: computed.alias('componentSpec.attrs'),
   preparedAttrs: computed('componentSpec', 'componentAttrs', function() {
     let ca = get(this, 'componentAttrs');

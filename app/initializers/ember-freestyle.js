@@ -18,8 +18,7 @@ function initialize(container, application) {
     }
 
     var module = require(moduleName, null, null, true);
-    var data = module['default'];
-    config = data['ember-freestyle'];
+    config = module['default'];
   });
   application.register('config:ember-freestyle', config, { instantiate: false });
   application.inject('service:ember-freestyle', 'config', 'config:ember-freestyle');

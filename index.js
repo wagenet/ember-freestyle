@@ -17,14 +17,7 @@ module.exports = {
     app.import('vendor/ember-freestyle.css');
   },
 
-  treeForApp: function(tree) {
-    return jsonModule(tree);
-  },
-
   postprocessTree: function(type, tree) {
-    if (type === 'js') {
-      return jsonModule(tree);
-    }
-    return tree;
-  },
+    return type === 'js' ? jsonModule(tree) : tree;
+  }
 };

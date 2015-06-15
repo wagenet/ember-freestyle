@@ -17,7 +17,7 @@
         "name": "freestyle-palette",
         "attrs": {
           "title": "Color Palette",
-          "colors": ["#A7C6DA", "#EEFCCE", "#9EB25D", "#F1DB4B", "#EDFF71"]
+          "colors": ["#DBB1BC", "#D3C4E3", "#8F95D3", "#89DAFF", "#58504A"]
         },
         "arrayAttrs": ["colors"]
       },

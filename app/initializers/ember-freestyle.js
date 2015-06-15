@@ -17,28 +17,12 @@ function initialize(container, application) {
       return;
     }
 
-    // var moduleParts = moduleName.split('/');
-    // var moduleType = moduleParts[moduleParts.length - 2];
-    // var moduleKey = moduleParts[moduleParts.length - 1];
-    // Ember.assert('Subdirectories under ' + moduleType + ' are not supported',
-    //              moduleParts[moduleParts.length - 3] === 'ember-freestyle');
-    // if (moduleType === 'scenario') {
-    //   Ember.assert('Only scenario/default.js is supported at this time.',
-    //                moduleKey !== 'default');
-    // }
-
     var module = require(moduleName, null, null, true);
-    // if (!module) { throw new Error(moduleName + ' must export a ' + moduleType); }
-
     var data = module['default'];
     config = data['ember-freestyle'];
   });
-  application.register('config:ef',
-    config,
-    { instantiate: false });
-  application.inject('service:ember-freestyle',
-                     'config',
-                     'config:ef');
+  application.register('config:ember-freestyle', config, { instantiate: false });
+  application.inject('service:ember-freestyle', 'config', 'config:ember-freestyle');
 }
 
 export default {

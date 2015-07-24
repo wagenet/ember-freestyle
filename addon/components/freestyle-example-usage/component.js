@@ -10,9 +10,14 @@ export default Ember.Component.extend({
   componentAttrs: computed.alias('componentSpec.attrs'),
   componentName: computed.alias('componentSpec.name'),
 
-  attrKeyValuePairs: computed('componentAttrs', function() {
+  attrKeyValuePairs: computed('componentSpec', 'componentAttrs', function() {
     let ca = get(this, 'componentAttrs');
-    let kvp = Ember.keys(ca).map((key) => {
+    let aa = get(this, 'componentSpec.arrayAttrs') || [];
+    var keys = Ember.keys(ca);
+    keys = keys.filter((k) => {
+      return aa.indexOf(k) === -1;
+    });
+    let kvp = keys.map((key) => {
       let value = ca[key];
       return `${key}="${value}"`;
     });

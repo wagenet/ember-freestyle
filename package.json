@@ -1,7 +1,7 @@
 {
   "name": "ember-freestyle",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Create a living styleguide for your Ember app.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,7 +11,7 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/chrislopresto/ember-freestyle.git",
   "engines": {
     "node": ">= 0.10.0"
   },

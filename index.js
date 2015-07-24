@@ -13,5 +13,9 @@ module.exports = {
 
   importCss: function(app) {
     app.import('vendor/ember-freestyle.css');
+  },
+
+  isDevelopingAddon: function() {
+    return true;
   }
 };

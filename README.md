@@ -1,6 +1,6 @@
-# Ember-freestyle
+# Ember Freestyle
 
-This README outlines the details of collaborating on this Ember addon.
+Ember Freestyle is an Ember addon that allows you to quickly create a living styleguide for your Ember app.
 
 ## Installation
 

@@ -1,0 +1,19 @@
+.freestyle-container {
+  position: relative;
+  background-color: silver;
+  overflow: hidden;
+
+  &.with-padding {
+    padding: 20px;
+  }
+
+  &.with-border {
+    border-radius: 5px;
+    border: solid 1px black;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 40px;
+  }
+}

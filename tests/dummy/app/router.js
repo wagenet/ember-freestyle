@@ -6,7 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('freestyle', { path: 'styleguide' });
+  this.route('freestyle');
+  this.route('example');
 });
 
 export default Router;

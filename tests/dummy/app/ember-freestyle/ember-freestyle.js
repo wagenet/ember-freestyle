@@ -17,8 +17,7 @@ export default {
       attrs: {
         title: 'Color Palette',
         colors: ['#DBB1BC', '#D3C4E3', '#8F95D3', '#89DAFF', '#58504A']
-      },
-      arrayAttrs: ['colors']
+      }
     },
     {
       name: 'x-foo',

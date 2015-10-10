@@ -1,26 +1,25 @@
 import Ember from 'ember';
 import layout from './template';
 
-const { computed, get } = Ember;
+const { computed, isArray } = Ember;
 
 export default Ember.Component.extend({
   layout: layout,
   classNames: ['freestyle-example-usage'],
-  componentSpec: null, // passed in
+  // componentSpec - passed in
   componentAttrs: computed.alias('componentSpec.attrs'),
   componentName: computed.alias('componentSpec.name'),
 
   attrKeyValuePairs: computed('componentSpec', 'componentAttrs', function() {
-    let ca = get(this, 'componentAttrs');
-    let aa = get(this, 'componentSpec.arrayAttrs') || [];
-    var keys = Ember.keys(ca);
-    keys = keys.filter((k) => {
-      return aa.indexOf(k) === -1;
+    const componentAttrs = this.get('componentAttrs');
+    let keys = Ember.A(Object.keys(componentAttrs));
+    keys = keys.reject(key => {
+      return isArray(componentAttrs[key]);
     });
-    let kvp = keys.map((key) => {
-      let value = ca[key];
+    const keyValuePairs = keys.map(key => {
+      const value = componentAttrs[key];
       return `${key}="${value}"`;
     });
-    return Ember.A(kvp);
+    return Ember.A(keyValuePairs);
   })
 });

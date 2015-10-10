@@ -17,7 +17,6 @@ export default {
       attrs: {
         colors: ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
       },
-      arrayAttrs: ['colors'],
       exampleUsage: false
     }
   ]

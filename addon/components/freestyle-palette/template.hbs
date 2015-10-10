@@ -1,5 +1,7 @@
-<h1>{{title}}</h1>
-{{#each colors as |color|}}
-  <div style='background-color: {{color}}'></div>
-{{/each}}
-{{yield}}
+<div class='ember-freestyle-palette'>
+  <h1>{{title}}</h1>
+  {{#each colors as |color|}}
+    {{freestyle-palette-item color=color}}
+  {{/each}}
+  {{yield}}
+</div>

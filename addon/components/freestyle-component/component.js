@@ -11,6 +11,7 @@ export default Ember.Component.extend({
   exampleUsageUnspecified: computed.none('exampleUsage'),
   showExampleUsage: computed.or('exampleUsageUnspecified','exampleUsage'),
   componentAttrs: computed.alias('componentSpec.attrs'),
+  containerView: Ember.ContainerView,
 
   didInsertElement: function() {
     let resolvedComponent = this.container.resolve(`component:${this.get('componentSpec.name')}`);

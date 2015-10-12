@@ -2,7 +2,8 @@ export default {
   title: 'Dummy App Styleguide',
   sections: [
     'Colors',
-    'Typography'
+    'Typography',
+    'Custom Foo'
   ],
   components: [
     {
@@ -27,12 +28,14 @@ export default {
     },
     {
       name: 'x-foo',
+      section: 'Custom Foo',
       attrs: {
         status: 'active'
       }
     },
     {
       name: 'x-foo',
+      section: 'Custom Foo',
       attrs: {
         status: 'most definitely not active'
       }

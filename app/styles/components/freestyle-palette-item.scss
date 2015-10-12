@@ -1,0 +1,25 @@
+.freestyle-palette-item {
+  display: inline-block;
+
+  .freestyle-palette-item-color {
+    height: 90px;
+    margin-right: 5px;
+    width: 160px;
+  }
+
+  .freestyle-palette-item-info {
+
+  }
+
+  .freestyle-palette-item-hex {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  .freestyle-palette-item-name {
+    font-size: 11px;
+    margin-top: 0;
+  }
+
+}

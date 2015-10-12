@@ -23,7 +23,28 @@ export default {
       section: 'Colors',
       attrs: {
         title: 'Color Palette',
-        colors: ['#DBB1BC', '#D3C4E3', '#8F95D3', '#89DAFF', '#58504A']
+        colors: [
+          {
+            name: 'mauve',
+            hex: '#dbb1bc'
+          },
+          {
+            name: 'lilac',
+            hex: '#d3c4e3'
+          },
+          {
+            name: 'periwinkle',
+            hex: '#8f95d3'
+          },
+          {
+            name: 'sky',
+            hex: '#89daff'
+          },
+          {
+            name: 'coffee',
+            hex: '#58504a'
+          }
+        ]
       }
     },
     {

@@ -6,9 +6,10 @@ const { htmlSafe } = Ember.String;
 
 export default Ember.Component.extend({
   layout: layout,
+  tagName: '',
   // color - passed in
   paletteStyle: computed('color', function() {
     const color = this.get('color');
-    return htmlSafe(`background-color: ${color};`);
+    return htmlSafe(`background-color: ${color.hex};`);
   })
 });

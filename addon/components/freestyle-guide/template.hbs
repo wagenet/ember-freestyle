@@ -4,9 +4,10 @@
     mobileTitle=emberFreestyle.config.title
     class='freestyle-guide'
 }}
-  {{mdl-nav-item name='Buttons' route='freestyle' inHeader=false}}
-  {{mdl-nav-item name='Tabs'    route='freestyle' inDrawer=false}}
-  {{mdl-nav-item name='Nav'     route='freestyle'}}
+  {{mdl-nav-item name="All" route=(query-params section=null) inHeader=false}}
+  {{#each emberFreestyle.config.sections as |section|}}
+    {{mdl-nav-item name=section route=(query-params section=section) inHeader=false}}
+  {{/each}}
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--12-col">
       {{yield}}

@@ -1,8 +1,13 @@
 export default {
   title: 'Ember Freestyle Styleguide',
+  sections: [
+    'Colors',
+    'Typography'
+  ],
   components: [
     {
       name: 'freestyle-headers',
+      section: 'Typography',
       attrs: {
         h1: 'Ember Freestyle Header 1',
         h2: 'Ember Freestyle Header 2',
@@ -14,6 +19,7 @@ export default {
     },
     {
       name: 'freestyle-palette',
+      section: 'Colors',
       attrs: {
         colors: ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
       },

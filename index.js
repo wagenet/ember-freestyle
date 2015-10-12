@@ -6,12 +6,12 @@ module.exports = {
 
   included: function(app) {
     if (app.import) {
-      this.importCss(app);
+      this.importEmberFreestyleDependencies(app);
     }
     this._super.included(app);
   },
 
-  importCss: function(app) {
+  importEmberFreestyleDependencies: function(app) {
     app.import('vendor/ember-freestyle.css');
   },
 

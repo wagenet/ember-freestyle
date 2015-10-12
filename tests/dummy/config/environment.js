@@ -13,6 +13,10 @@ module.exports = function(environment) {
       }
     },
 
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -27,7 +31,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
     ENV.contentSecurityPolicy = {
-      'style-src': "'self' 'unsafe-inline'",
+      'font-src': "'self' fonts.gstatic.com",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
     }
   }
 

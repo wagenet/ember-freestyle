@@ -1,0 +1,15 @@
+{{#mdl-nav
+    title=emberFreestyle.config.title
+    fixedDrawer=true
+    mobileTitle=emberFreestyle.config.title
+    class='freestyle-guide'
+}}
+  {{mdl-nav-item name='Buttons' route='freestyle' inHeader=false}}
+  {{mdl-nav-item name='Tabs'    route='freestyle' inDrawer=false}}
+  {{mdl-nav-item name='Nav'     route='freestyle'}}
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      {{yield}}
+    </div>
+  </div>
+{{/mdl-nav}}

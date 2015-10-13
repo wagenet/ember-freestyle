@@ -1,15 +1,69 @@
-.freestyle-guide {
-  .page-content {
-    padding: 20px;
-  }
+.freestyle-guide-nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  margin-top: 0;
+  list-style: none;
+  background: #eeeeee;
+  padding: 10px;
+}
 
-  .mdl-layout-title {
-    padding-left: 0;
-  }
+.freestyle-guide-nav-item {
+  width: 200px;
+  padding-bottom: 4px;
+}
 
-  .mdl-layout__drawer-button {
-    position: relative;
-    margin-bottom: -30px;
-    margin-left: -14px;
-  }
+.freestyle-guide-nav-item-link {
+  text-decoration: none;
+  color: #666666;
+}
+
+.freestyle-guide-content {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 10px;
+}
+
+.freestyle-guide-nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="freestyle-guide-nav-trigger"] {
+  display: inline-block;
+  z-index: 2;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+.freestyle-guide-nav-trigger + label, .freestyle-guide-content {
+  transition: left 0.2s;
+}
+
+.freestyle-guide-nav-trigger:checked + label {
+  left: 215px;
+}
+
+.freestyle-guide-nav-trigger:checked ~ .freestyle-guide-content {
+  left: 200px;
+  border: solid 1px #dddddd;
+}
+
+.freestyle-guide-title {
+  font-size: 20px;
+  margin-left: 10px;
 }

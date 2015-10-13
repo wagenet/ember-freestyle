@@ -1,16 +1,26 @@
-{{#mdl-nav
-    title=emberFreestyle.config.title
-    fixedDrawer=true
-    mobileTitle=emberFreestyle.config.title
-    class='freestyle-guide'
-}}
-  {{mdl-nav-item name="All" route=(query-params section=null) inHeader=false}}
-  {{#each emberFreestyle.config.sections as |section|}}
-    {{mdl-nav-item name=section route=(query-params section=section) inHeader=false}}
-  {{/each}}
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
-      {{yield}}
-    </div>
+<div class="freestyle-guide">
+
+  <ul class="freestyle-guide-nav">
+    <li class="freestyle-guide-nav-item">
+      {{#link-to (query-params section=null) class="freestyle-guide-nav-item-link"}}
+        All
+      {{/link-to}}
+    </li>
+    {{#each emberFreestyle.config.sections as |section|}}
+      <li class="freestyle-guide-nav-item">
+        {{#link-to (query-params section=section) class="freestyle-guide-nav-item-link"}}
+          {{section}}
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+
+  <input type="checkbox" id="freestyle-guide-nav-trigger" class="freestyle-guide-nav-trigger" />
+
+  <div class="freestyle-guide-content">
+    <label for="freestyle-guide-nav-trigger"></label>
+    <span class='freestyle-guide-title'>{{emberFreestyle.config.title}}</span>
+
+    {{yield}}
   </div>
-{{/mdl-nav}}
+</div>

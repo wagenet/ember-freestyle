@@ -1,9 +1,13 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-addon');
+var jsonImporter = require('node-sass-json-importer');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  var app = new EmberApp({
     // Add options here
+    sassOptions: {
+      importer: jsonImporter
+    }
   });
 
   /*

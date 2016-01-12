@@ -1,0 +1,24 @@
+{
+  "ColorPalette-colors": {
+    "primary": {
+      "name": "cyan",
+      "base": "#00bcd4",
+      "light": "#b2ebf2",
+      "dark": "#0097a7"
+    },
+    "accent": {
+      "name": "amber",
+      "base": "#ffc107"
+    },
+    "secondary": {
+      "base": "#b6b6b6"
+    },
+    "foreground": {
+      "base": "#212121",
+      "light": "#727272"
+    },
+    "background": {
+      "base": "#ffffff"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+// Credit: https://scotch.io/tutorials/aesthetic-sass-2-colors
+$ColorPalette-borderColor: #cecece;
+$ColorPalette-variantHeight: 1.5rem;
+
+.ColorPalette {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 100%;
+
+  *, *:before, *:after {
+    position: relative;
+  }
+}
+
+.ColorPalette-color {
+  width: calc(20% - 1rem);
+  height: 170px;
+  display: block;
+  border: 1px solid $ColorPalette-borderColor;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid $ColorPalette-borderColor;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-size: 85%;
+    overflow: hidden;
+    word-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &:before {
+    background-color: white;
+    font-weight: bold;
+  }
+
+  &:after {
+    padding-top: 1.5rem;
+    font-size: 70%;
+    color: gray;
+  }
+
+  @each $colorKey, $colorVariants in $ColorPalette-colors {
+    $baseColorValue: map-get($colorVariants, 'base');
+
+    &.ColorPalette-color--#{$colorKey} {
+      background-color: $baseColorValue;
+
+      &:before { content: "#{$colorKey}"; }
+      &:after { content: "#{$baseColorValue}"; }
+
+      $variantGradient: (unquote("to bottom"),);
+
+      $index: 0;
+      @each $variantName, $variantValue in $colorVariants {
+        $variantGradient: append($variantGradient, $variantValue $index * $ColorPalette-variantHeight);
+        $index: $index + 1;
+        $variantGradient: append($variantGradient, $variantValue $index * $ColorPalette-variantHeight);
+      }
+
+      .ColorPalette-colorVariants {
+        border-left: 2px solid white;
+        border-bottom: 2px solid white;
+        position: absolute;
+        height: $ColorPalette-variantHeight * length($colorVariants);
+        width: $ColorPalette-variantHeight;
+        right: 0;
+        top: 0;
+        background: linear-gradient(#{$variantGradient});
+      }
+    }
+  }
+}

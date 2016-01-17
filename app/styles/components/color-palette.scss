@@ -10,6 +10,7 @@ $ColorPalette-variantHeight: 1.5rem;
 
   *, *:before, *:after {
     position: relative;
+    box-sizing: border-box;
   }
 }
 

@@ -12,13 +12,16 @@
       "base": "#ffc107"
     },
     "secondary": {
+      "name": "grey-ish",
       "base": "#b6b6b6"
     },
     "foreground": {
+      "name": "black-ish",
       "base": "#212121",
       "light": "#727272"
     },
     "background": {
+      "name": "white",
       "base": "#ffffff"
     }
   }

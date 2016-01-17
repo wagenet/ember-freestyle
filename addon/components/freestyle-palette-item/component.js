@@ -10,6 +10,6 @@ export default Ember.Component.extend({
   // color - passed in
   paletteStyle: computed('color', function() {
     const color = this.get('color');
-    return htmlSafe(`background-color: ${color.hex};`);
+    return htmlSafe(`background-color: ${color.base};`);
   })
 });

@@ -6,7 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('freestyle');
   this.route('example');
   this.route('clean');
 });

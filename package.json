@@ -33,7 +33,6 @@
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
-    "ember-legacy-views": "0.2.0",
     "ember-try": "0.0.6",
     "node-sass": "sass/node-sass#ec18ef5e0993c8ea53ac247bdd74c471f238326c",
     "node-sass-json-importer": "^1.0.5"

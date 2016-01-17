@@ -2,7 +2,8 @@
 import Ember from 'ember';
 import ENV from '../config/environment';
 
-function initialize(container, application) {
+function initialize() {
+  const application = arguments[1] || arguments[0];
   var prefix = ENV.modulePrefix;
 
   var freestyleModuleRegExp = new RegExp(

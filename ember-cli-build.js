@@ -6,7 +6,10 @@ module.exports = function(defaults) {
   var app = new EmberApp({
     // Add options here
     sassOptions: {
-      importer: jsonImporter
+      importer: jsonImporter,
+      includePaths: [
+        'freestyle'
+      ]
     }
   });
 

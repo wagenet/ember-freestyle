@@ -1,18 +1,15 @@
 /* jshint node: true */
 'use strict';
+var jsonModule = require('broccoli-json-module');
+var mergeTrees = require('broccoli-merge-trees');
 
 module.exports = {
   name: 'ember-freestyle',
 
-  included: function(app) {
-    if (app.import) {
-      this.importEmberFreestyleDependencies(app);
-    }
-    this._super.included(app);
-  },
-
-  importEmberFreestyleDependencies: function(app) {
-    app.import('vendor/ember-freestyle.css');
+  treeForApp: function(tree) {
+    var freestyleTree = jsonModule('freestyle');
+    var appTree = mergeTrees([tree, freestyleTree]);
+    return appTree;
   },
 
   isDevelopingAddon: function() {

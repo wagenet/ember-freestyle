@@ -6,7 +6,7 @@ function initialize(container, application) {
   var prefix = ENV.modulePrefix;
 
   var freestyleModuleRegExp = new RegExp(
-    '^' + prefix + '/ember-freestyle'
+    '^' + prefix + '/palette'
   );
   var config = {};
 

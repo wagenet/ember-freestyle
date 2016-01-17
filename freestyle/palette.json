@@ -2,6 +2,7 @@
   "ColorPalette-colors": {
     "primary": {
       "name": "cyan",
+      "description": "something toply cyanish",
       "base": "#00bcd4",
       "light": "#b2ebf2",
       "dark": "#0097a7"

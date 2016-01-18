@@ -6,7 +6,7 @@ const { computed } = Ember;
 export default Ember.Component.extend({
   layout: template,
   tagName: '',
-  emberFreestyle: Ember.inject.service(),
-  description: computed.alias('emberFreestyle.config.ColorPalette-colors.primary.description'),
-  base: computed.alias('emberFreestyle.config.ColorPalette-colors.primary.base')
+  freestyle: Ember.inject.service('ember-freestyle'),
+  description: computed.alias('freestyle.config.ColorPalette-colors.primary.description'),
+  base: computed.alias('freestyle.config.ColorPalette-colors.primary.base')
 });

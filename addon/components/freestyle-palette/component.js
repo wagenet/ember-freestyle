@@ -1,14 +1,15 @@
 import Ember from 'ember';
 import layout from './template';
 
-const { computed } = Ember;
+const { computed, inject } = Ember;
 
 export default Ember.Component.extend({
   tagName: '',
   layout: layout,
   title: 'Palette',
-  emberFreestyle: Ember.inject.service(),
-  colorPalette: computed.alias('emberFreestyle.config.ColorPalette-colors'),
+  freestyle: inject.service('ember-freestyle'),
+  description: computed.alias('freestyle.miscellany.human.name'),
+  colorPalette: computed.alias('freestyle.palette.ColorPalette-colors'),
   colors: computed('colorPalette', function() {
     return Ember.A(
       Object.keys(this.get('colorPalette')).map((k) => {

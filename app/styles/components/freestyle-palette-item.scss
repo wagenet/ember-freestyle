@@ -1,14 +1,19 @@
+$freestylePaletteItemBorderColor: #cecece;
+
 .freestyle-palette-item {
   display: inline-block;
+  border: solid 1px $freestylePaletteItemBorderColor;
+  margin: 5px;
 
   .freestyle-palette-item-color {
     height: 90px;
-    margin-right: 5px;
     width: 160px;
   }
 
   .freestyle-palette-item-info {
-
+    border-top: solid 1px $freestylePaletteItemBorderColor;
+    padding: 5px;
+    background-color: #fff;
   }
 
   .freestyle-palette-item-hex {
@@ -20,6 +25,7 @@
   .freestyle-palette-item-name {
     font-size: 11px;
     margin-top: 0;
+    color: gray;
   }
 
 }

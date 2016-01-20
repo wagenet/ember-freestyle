@@ -10,7 +10,8 @@ module.exports = function(defaults) {
       includePaths: [
         'freestyle'
       ]
-    }
+    },
+    snippetSearchPaths: ['tests/dummy/app', 'addon']
   });
 
   /*

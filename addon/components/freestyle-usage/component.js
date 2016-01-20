@@ -9,5 +9,6 @@ export default Ember.Component.extend({
   snippetKey: computed('snippetName', function() {
     return `${this.get('snippetName')}.hbs`;
   }),
-  positionalParams: ['snippetName']
+  positionalParams: ['snippetName'],
+  highlightJsTheme: 'zenburn'
 });

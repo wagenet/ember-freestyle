@@ -41,11 +41,17 @@ module.exports = {
   },
 
   snippetPaths: function() {
-    return this.app.options.snippetPaths || ['snippets'];
+    if (this.app) {
+      return this.app.options.snippetPaths || ['snippets'];
+    }
+    return ['snippets']
   },
 
   snippetSearchPaths: function() {
-    return this.app.options.snippetSearchPaths || ['app'];
+    if (this.app) {
+      return this.app.options.snippetSearchPaths || ['app'];
+    }
+    return ['app'];
   },
 
   treeForStyles: function(tree) {

@@ -88,9 +88,5 @@ module.exports = {
 
   isDevelopingAddon: function() {
     return true;
-  },
-
-  hintingEnabled: function() {
-    return false;
   }
 };

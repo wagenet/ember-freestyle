@@ -44,7 +44,7 @@ module.exports = {
     if (this.app) {
       return this.app.options.snippetPaths || ['snippets'];
     }
-    return ['snippets']
+    return ['snippets'];
   },
 
   snippetSearchPaths: function() {
@@ -87,6 +87,10 @@ module.exports = {
   },
 
   isDevelopingAddon: function() {
+    return true;
+  },
+
+  hintingEnabled: function() {
     return false;
   }
 };

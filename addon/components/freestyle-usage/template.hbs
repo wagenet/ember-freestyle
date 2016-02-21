@@ -1,22 +1,27 @@
-{{#if (and title showLabels)}}
-  <div class="FreestyleUsage-title">
-    {{title}}
-  </div>
-{{/if}}
-<div class="FreestyleUsage-rendered">
-  {{yield}}
-</div>
-{{#if (and snippetName showNotes)}}
-  <div class="FreestyleUsage-notes">
-    {{freestyle-notes name=snippetNotes theme=computedTheme}}
-  </div>
-{{/if}}
-{{#if (and snippetName showCode)}}
-  <div class="FreestyleUsage-usage">
-    <div class="FreestyleUsage-snippet FreestyleUsage-snippet--{{computedTheme}}">
-      {{freestyle-snippet name=snippetHbs title=hbsTitle}}
-      {{freestyle-snippet name=snippetJs title=jsTitle}}
-      {{freestyle-snippet name=snippetScss title=scssTitle}}
+{{#unless isNote}}
+  {{#if (and title showLabels)}}
+    <div class="FreestyleUsage-title">
+      {{title}}
     </div>
+  {{/if}}
+  <div class="FreestyleUsage-rendered">
+    {{yield}}
   </div>
-{{/if}}
+  {{#if (and snippetName showNotes)}}
+    <div class="FreestyleUsage-notes">
+      {{freestyle-notes name=snippetNotesJs theme=computedTheme}}
+    </div>
+    <div class="FreestyleUsage-notes">
+      {{freestyle-notes name=snippetNotesHbs theme=computedTheme}}
+    </div>
+  {{/if}}
+  {{#if (and snippetName showCode)}}
+    <div class="FreestyleUsage-usage">
+      <div class="FreestyleUsage-snippet FreestyleUsage-snippet--{{computedTheme}}">
+        {{freestyle-snippet name=snippetHbs title=hbsTitle}}
+        {{freestyle-snippet name=snippetJs title=jsTitle}}
+        {{freestyle-snippet name=snippetScss title=scssTitle}}
+      </div>
+    </div>
+  {{/if}}
+{{/unless}}

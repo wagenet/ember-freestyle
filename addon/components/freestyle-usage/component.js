@@ -20,13 +20,20 @@ let FreestyleUsage = Ember.Component.extend({
   snippetScss: computed('snippetName', function() {
     return `${this.get('snippetName')}.scss`;
   }),
-  snippetNotes: computed('snippetName', function() {
+  snippetNotesJs: computed('snippetName', function() {
     return `${this.get('snippetName')}:notes.js`;
+  }),
+  snippetNotesHbs: computed('snippetName', function() {
+    return `${this.get('snippetName')}:notes.hbs`;
   }),
   defaultTheme: computed.alias('emberFreestyle.defaultTheme'),
   // highlightJsTheme - passed in
   computedTheme: computed('defaultTheme', 'highlightJsTheme', function() {
     return this.get('highlightJsTheme') || this.get('defaultTheme');
+  }),
+  isNote: computed('snippetName', function() {
+    let snippetName = this.get('snippetName');
+    return snippetName && snippetName.indexOf(':notes') >= 0;
   })
 });
 

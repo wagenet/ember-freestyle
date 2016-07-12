@@ -31,6 +31,8 @@ This installation process is opinionated in order to get you going quickly. We w
 1. Navigate to `/freestyle`. You should now see something like:
     ![](doc/freestyle-generated.png)
 
+*Note:* Ember Freestyle is compatible with Ember 1.13 onward.
+
 ## Introduction
 
 ### Anatomy of a Basic Style Guide

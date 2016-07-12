@@ -1,10 +1,12 @@
-@import 'reset';
-@import 'mixins';
-@import 'palette';
-
-@import 'ember-freestyle';
-
-@import 'site';
-@import 'components/all';
-
+// https://scotch.io/tutorials/aesthetic-sass-1-architecture-and-style-organization
+// http://sass-guidelin.es/#the-7-1-pattern
+@import 'base/module';
+@import 'components/module';
+@import 'layout/module';
+@import 'routes/module';
+@import 'themes/module';
+//@import 'utils/module';
+//@import 'vendors/module';
 @import 'todo';
+
+// @import 'site';

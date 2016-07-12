@@ -21,7 +21,9 @@ $FreestylePalette: (
   ),
   'background': (
     'name': 'white',
-    'base': #fff
+    'base': #fff,
+    'dark': #eee,
+    'darker': #ddd
   )
 );
 
@@ -32,7 +34,7 @@ $FreestylePalette-opacities: (
   'darker': .3
 );
 
-@function freestyle-color(
+@function palette-color(
   $name: 'primary',
   $variant: $FreestylePalette-baseKey,
   $opacity: 1
@@ -56,8 +58,8 @@ $FreestylePalette-opacities: (
 
 // Wire up variables to provide a mechanism for consuming apps to override
 // without using freestyle.json files or hash maps
-$FreestyleGuide-color--primary: freestyle-color('primary') !default;
-$FreestyleGuide-color--accent: freestyle-color('accent') !default;
-$FreestyleGuide-color--secondary: freestyle-color('secondary') !default;
-$FreestyleGuide-color--foreground: freestyle-color('foreground') !default;
-$FreestyleGuide-color--background: freestyle-color('background') !default;
+$FreestyleGuide-color--primary: palette-color('primary') !default;
+$FreestyleGuide-color--accent: palette-color('accent') !default;
+$FreestyleGuide-color--secondary: palette-color('secondary') !default;
+$FreestyleGuide-color--foreground: palette-color('foreground') !default;
+$FreestyleGuide-color--background: palette-color('background') !default;

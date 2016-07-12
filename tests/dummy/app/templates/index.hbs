@@ -1,0 +1,26 @@
+<div class="Site">
+  <header class="Site-header">
+    {{site-header}}
+  </header>
+  <main class="Site-body">
+    <article class="Site-content">
+      <h2>Site Content</h2>
+      <ul>
+        <li>something</li>
+        <li>something</li>
+        <li>something else</li>
+      </ul>
+    </article>
+    <nav class="Site-nav">
+      {{#link-to 'example'}}Example{{/link-to}}
+    </nav>
+    {{!#if isAsideShowing}}
+      <aside class="Site-aside">
+        <h3 class="Headline">You Might Be Interested In</h3>
+      </aside>
+    {{!/if}}
+  </main>
+  <footer class="Site-footer">
+    {{site-footer}}
+  </footer>
+</div>

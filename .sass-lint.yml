@@ -6,5 +6,7 @@ rules:
 files:
     ignore:
       - '**/x-foo.scss'
+      - '**/breakpoints.scss'
       - '**/reset.scss'
+      - '**/typography.scss'
       - '**/freestyle-palette-item.scss'

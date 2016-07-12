@@ -1,0 +1,54 @@
+.SiteHeader {
+  background-color: palette-color('primary');
+  color: palette-color('background');
+  display: flex;
+  flex-wrap: wrap;
+  padding: .5rem 1rem;
+
+  &-item {
+    align-self: center;
+    flex-basis: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    @include mappy-bp(med) {
+      flex: 1;
+      flex-basis: auto;
+      margin: 0;
+      padding: .5rem;
+      text-align: left;
+    }
+  }
+
+  &-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: .5rem 0 0;
+
+    @include mappy-bp(med) {
+      order: -1;
+      padding: 0;
+    }
+  }
+
+  &-navList {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-navListItem {
+    padding: 0 .2rem;
+  }
+
+  &-navLink {
+    color: palette-color('background');
+    font-weight: 300;
+    text-decoration: none;
+
+    &.active {
+      color: palette-color('accent');
+    }
+  }
+}

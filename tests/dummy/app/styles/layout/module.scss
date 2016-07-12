@@ -1,0 +1,63 @@
+// 1. Avoid the IE 10-11 `min-height` bug.
+// 2. Set `flex-shrink` to `0` to prevent some browsers from
+//    letting these items shrink to smaller than their content's default
+//    minimum size. See http://bit.ly/1Mn35US for details.
+// 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+
+.Site {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 320px;
+
+  &-header,
+  &-footer {
+    flex: none;
+  }
+
+  &-body {
+    background-color: palette-color('background');
+    border-top: solid 1px palette-color('background', 'darker');
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+
+    @include mappy-bp(large) {
+      flex-direction: row;
+    }
+  }
+
+  &-content {
+    margin-top: 1.5rem;
+    padding: 1rem;
+
+    @include mappy-bp(large) {
+      flex: 1;
+      margin: 0;
+    }
+  }
+
+  &-nav {
+    background-color: palette-color('background');
+    border-right: solid 1px palette-color('background', 'darker');
+    order: -1;
+  }
+
+  &-aside {
+    text-align: center;
+  }
+
+  &-nav,
+  &-aside {
+    padding: 1rem;
+
+    @include mappy-bp(large) {
+      flex: 0 0 18rem;
+    }
+  }
+
+  &-footer {
+    border-top: solid 1px palette-color('background', 'darker');
+  }
+}

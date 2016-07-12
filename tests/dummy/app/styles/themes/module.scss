@@ -1,3 +1,11 @@
 body {
   color: palette-color('foreground');
 }
+
+a {
+  color: palette-color('primary');
+
+  &:hover {
+    color: palette-color('primary', 'dark');
+  }
+}

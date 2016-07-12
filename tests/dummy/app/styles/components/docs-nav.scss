@@ -1,0 +1,27 @@
+.DocsNav {
+  color: palette-color('foreground');
+
+  &-toc {
+    list-style: none;
+    padding: 0;
+  }
+
+  &-section {
+    font-weight: 700;
+    padding-bottom: .2rem;
+    padding-top: .6rem;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &-item {
+    padding-left: .6rem;
+    text-decoration: none;
+
+    &.active {
+      color: palette-color('accent');
+    }
+  }
+}

@@ -1,10 +1,13 @@
 <nav class="SiteHeader-item SiteHeader-nav">
   <ul class="SiteHeader-navList">
     <li class="SiteHeader-navListItem">
-      <a class="SiteHeader-navLink" href="#">Documentation</a>
+      {{#link-to "docs" class="SiteHeader-navLink"}}Documentation{{/link-to}}
     </li>
     <li class="SiteHeader-navListItem">
-      <a class="SiteHeader-navLink" href="#">About</a>
+      {{#link-to "site.about" class="SiteHeader-navLink"}}About{{/link-to}}
+    </li>
+    <li class="SiteHeader-navListItem">
+      {{#link-to "example" class="SiteHeader-navLink"}}Example{{/link-to}}
     </li>
     <li class="SiteHeader-navListItem">
       <a class="SiteHeader-navLink" href="https://github.com/chrislopresto/ember-freestyle" target="_blank">GitHub</a>
@@ -12,5 +15,5 @@
   </ul>
 </nav>
 <div class="SiteHeader-item SiteHeader-logo">
-  Ember Freestyle
+  {{#link-to "site.index" class="SiteHeader-logoLink"}}Ember Freestyle{{/link-to}}
 </div>

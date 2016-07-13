@@ -1,0 +1,26 @@
+.r-SiteIndex {
+  &-tagline {
+    color: palette-color('primary', 'dark');
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    padding: 0 0 2rem;
+
+    @include mappy-bp(med) {
+      font-size: 4rem;
+      padding: 1rem 2rem 2rem;
+    }
+  }
+
+  &-imageContainer {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &-image {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 palette-color('foreground', 'base', .26);
+    max-width: 80%;
+    width: 600px;
+  }
+}

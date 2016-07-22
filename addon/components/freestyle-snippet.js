@@ -55,7 +55,7 @@ export default Ember.Component.extend({
   language: computed('name', function() {
     let key = /\.(\w+)$/i.exec(this.get('name'));
 
-    if (this.get('name').indexOf(':notes') >= 0) {
+    if (this.get('name').indexOf('--notes') >= 0) {
       return 'markdown';
     }
 

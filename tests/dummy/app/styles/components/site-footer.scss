@@ -11,7 +11,7 @@
     padding: .5rem;
     text-align: center;
 
-    @include mappy-bp(large) {
+    @include freestyle-docs-breakpoint('large') {
       flex: 1;
       margin: 0;
       text-align: left;

@@ -23,7 +23,7 @@
     flex: 1 0 auto;
     flex-direction: column;
 
-    @include mappy-bp(large) {
+    @include freestyle-docs-breakpoint('large') {
       flex-direction: row;
     }
   }
@@ -32,7 +32,7 @@
     margin-top: 1.5rem;
     padding: 1rem;
 
-    @include mappy-bp(large) {
+    @include freestyle-docs-breakpoint('large') {
       flex: 1;
       margin: 0;
     }
@@ -52,7 +52,7 @@
   &-aside {
     padding: 1rem;
 
-    @include mappy-bp(large) {
+    @include freestyle-docs-breakpoint('large') {
       flex: 0 0 18rem;
     }
   }

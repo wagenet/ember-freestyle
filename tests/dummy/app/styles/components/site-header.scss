@@ -11,7 +11,7 @@
     margin: 0 auto;
     text-align: center;
 
-    @include mappy-bp(med) {
+    @include freestyle-docs-breakpoint('med') {
       flex: 1;
       flex-basis: auto;
       margin: 0;
@@ -25,7 +25,7 @@
     font-size: 1.4rem;
     padding: .5rem 0 0;
 
-    @include mappy-bp(med) {
+    @include freestyle-docs-breakpoint('med') {
       order: -1;
       padding: 0;
     }
@@ -41,7 +41,7 @@
   }
 
   &-nav {
-    @include mappy-bp(med) {
+    @include freestyle-docs-breakpoint('med') {
       text-align: right;
     }
   }

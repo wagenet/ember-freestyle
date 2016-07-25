@@ -1,9 +1,13 @@
-@import '_mappy-breakpoints';
-
-$breakpoints: (
+$FreestyleDocsBreakpoints: (
   'small': 320px,
   'med': 640px,
   'large': 920px,
   'wide': 1200px,
   'mega': 1400px
 );
+
+@mixin freestyle-docs-breakpoint($name: 'large') {
+  @media (min-width: map-get($FreestyleDocsBreakpoints, $name)) {
+    @content
+  }
+};

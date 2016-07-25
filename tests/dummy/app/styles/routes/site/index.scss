@@ -6,7 +6,7 @@
     font-weight: 100;
     padding: 0 0 2rem;
 
-    @include mappy-bp(med) {
+    @include freestyle-docs-breakpoint('med') {
       font-size: 4rem;
       padding: 1rem 2rem 2rem;
     }

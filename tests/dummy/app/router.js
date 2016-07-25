@@ -14,8 +14,7 @@ Router.map(function() {
   });
 
   this.route('docs', function() {
-    this.route('installation', { path: '' })
-    this.route('freestyle-guide')
+    this.route('page', { path: '*path' });
   });
 });
 

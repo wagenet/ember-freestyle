@@ -1,8 +1,5 @@
-<h2>Installation</h2>
+## Installation
 
-{{freestyle-notes name='Docs-installation:notes.hbs' theme='solarized-light'}}
-
-{{#freestyle-note 'Docs-installation:notes'}}
 This installation process is opinionated in order to get you going quickly. We want to make everything much easier to use in the near future. Please report any problems, and as always, PRs are welcome.
 
 1. `ember install ember-freestyle`
@@ -22,4 +19,3 @@ This installation process is opinionated in order to get you going quickly. We w
 1. Navigate to `/freestyle`.
 
 *Note:* Ember Freestyle is compatible with Ember 1.13 onward.
-{{/freestyle-note}}

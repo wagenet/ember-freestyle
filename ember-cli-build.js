@@ -10,6 +10,7 @@ module.exports = function(defaults) {
       cascade: false
     },
     freestyle: {
+      snippetPaths: ['docs'],
       snippetSearchPaths: ['tests/dummy/app', 'app/styles']
     }
   });

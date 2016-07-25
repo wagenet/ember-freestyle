@@ -16,7 +16,7 @@ function naiveMerge(obj1, obj2){
 
 function findFiles(srcDir) {
   return new _Promise(function(resolve, reject) { // jshint ignore:line
-    glob(path.join(srcDir, "**/*.+(js|hbs|css|scss|less)"), function (err, files) {
+    glob(path.join(srcDir, "**/*.+(js|hbs|css|scss|less|md)"), function (err, files) {
       if (err) {
         reject(err);
       } else {

@@ -1,6 +1,3 @@
-{{freestyle-notes name='Docs-freestyleGuide:notes.hbs' theme='solarized-light'}}
-
-{{#freestyle-note 'Docs-freestyleGuide:notes'}}
 ### Anatomy of a Basic Style Guide
 
 Here is a simple style guide, where `{{loading-spinner}}` is a hypothetical component **in your application**.
@@ -14,4 +11,3 @@ Here is a simple style guide, where `{{loading-spinner}}` is a hypothetical comp
   {{/freestyle-section}}
 {{/freestyle-guide}}
 ```
-{{/freestyle-note}}
